@@ -1,0 +1,17 @@
+﻿<Properties StartupItem="project1/project1.csproj">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|x86" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="project1/Program (3rd copy).cs">
+    <Files>
+      <File FileName="project1/Program.cs" Line="14" Column="27" />
+      <File FileName="project1/Program (copy).cs" Line="1" Column="1" />
+      <File FileName="project1/Program (another copy).cs" Line="1" Column="1" />
+      <File FileName="project1/Program (3rd copy).cs" Line="9" Column="19" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore>
+      <Breakpoint file="/home/pravin/Documents/project1/project1/Program.cs" line="30" column="12" />
+    </BreakpointStore>
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+</Properties>

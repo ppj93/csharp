@@ -1,0 +1,5 @@
+/home/pravin/Documents/project1/project1/obj/x86/Debug/.NETFramework,Version=v4.5.AssemblyAttribute.cs
+/home/pravin/Documents/project1/project1/bin/Debug/project1.exe.mdb
+/home/pravin/Documents/project1/project1/bin/Debug/project1.exe
+/home/pravin/Documents/project1/project1/obj/x86/Debug/project1.exe
+/home/pravin/Documents/project1/project1/obj/x86/Debug/project1.exe.mdb
