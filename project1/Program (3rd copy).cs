@@ -14,7 +14,7 @@ namespace project1
 		}
 
 		static Flag l = new Flag(){k= false};
-		static void Main (string[] args)
+		static void Main1 (string[] args)
 		{
 			var x = new List<Thread> ();
 				
@@ -68,6 +68,7 @@ namespace project1
 			Interlocked.CompareExchange (ref operated, 122, 1);
 
 			Interlocked.Exchange (ref operated, 11);
+
 
 
 		}
