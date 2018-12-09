@@ -11,7 +11,7 @@ namespace project1
 	[Synchronization]
 	class MainClass122
 	{
-		static void Main (string[] args)
+		static void Main22 (string[] args)
 		{
 			TimerCallback t = new TimerCallback (printTime);
 			Timer timer = new Timer (t, null, 0, 10000);

@@ -1,45 +1,66 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Collections.ObjectModel;
+using System.Linq;
 
 namespace project1
 {
-	class MainClass
-	{
-		public double this[int index] {
-			get{ return new Random().NextDouble(); }
-		}
+    class MainClass
+    {
+        public static void Main(string[] args)
+        {
+            var tests = new[] { new test() { name = "pravin" }, new test() { name = "sometjigelse" } };
 
-		delegate int addMet(int x, int y);
-		static event addMet kl;
+            Array.Sort(tests, new testComparer());
 
-		public static void Main1(string[] args)
-		{
-			Console.WriteLine (new MainClass () [11]);
-			addMet n = new addMet(delegate(int x, int y) {
-				return x+y;
-			});
+            Console.Write(tests.Select(x => x.name).Aggregate((arg1, arg2) => arg1 + "--" + arg2));
 
-			addMet x11 = (u, y)=>{return u-y;};
-			Console.WriteLine(n.Invoke (1,2));
-			Console.WriteLine (x11.Invoke (1, 2));
+            ObservableCollection<test> o = new ObservableCollection<test>();
+            o.CollectionChanged += notifyCollectionChange;
 
-			Action<int> uu = u => {Console.WriteLine(u);};
+            o.Add(new test());
+            o.RemoveAt(0);
+        }
 
-			uu (122);
+        static T GetDefaultValue<T>(T arg) where T:class, new()//, test
+        {
+            return default(T);
+        }
 
-			Func<int, int, string> jjj = (u, s) => {
-				return s.ToString();
-			};
+        static void notifyCollectionChange(object sender, System.Collections.Specialized.NotifyCollectionChangedEventArgs args) 
+        {
+            Console.WriteLine("start");
+            Console.WriteLine(sender);
+            Console.WriteLine(args.Action);
+            Console.WriteLine(args.NewItems);
+            Console.WriteLine(args.OldItems);
+            Console.WriteLine("end");
+        }
 
-			foreach (var d in n.GetInvocationList()) {
-				Console.WriteLine (d.Method);
-				Console.WriteLine (d.Target);
-			}
+        class test {
+            public string name { get; set; }
+        }
 
-			kl += (x, y) => x+y;
+        class testComparer : System.Collections.IComparer
+        {
+            public int Compare(object x, object y)
+            {
+                var xtyped = x as test;
+                var ytyped = y as test;
 
-			kl.Invoke (00, 99);
-		}
+                if (x == y)
+                    return 0;
 
-	}
+                if (x == null)
+                    return -1;
+
+                if (y == null)
+                    return 1;
+
+                return String.Compare(xtyped.name, ytyped.name);
+            }
+        }
+
+    }
 }
 		

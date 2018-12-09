@@ -1,0 +1,6 @@
+/home/pravin/workspace/csharp/project1/obj/x86/Debug/project1.csprojAssemblyReference.cache
+/home/pravin/workspace/csharp/project1/obj/x86/Debug/project1.csproj.CoreCompileInputs.cache
+/home/pravin/workspace/csharp/project1/obj/x86/Debug/project1.exe
+/home/pravin/workspace/csharp/project1/bin/Debug/project1.exe
+/home/pravin/workspace/csharp/project1/bin/Debug/project1.pdb
+/home/pravin/workspace/csharp/project1/obj/x86/Debug/project1.pdb

@@ -39,6 +39,7 @@
     <Compile Include="Program %28another copy%29.cs" />
     <Compile Include="Program %283rd copy%29.cs" />
     <Compile Include="Program %284th copy%29.cs" />
+    <Compile Include="Program %285th copy%29.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
 </Project>
